@@ -1,0 +1,57 @@
+# Configuration for Diabetes Prediction API
+
+# Server Settings
+server:
+  host: "0.0.0.0"
+  port: 8000
+  reload: true
+  workers: 4
+
+# Model Settings
+model:
+  path: "../models/saved/diabetes_model.pkl"
+  type: "random_forest"
+  
+# API Settings
+api:
+  title: "Diabetes Prediction API"
+  version: "1.0.0"
+  docs_url: "/docs"
+  redoc_url: "/redoc"
+
+# Security
+security:
+  secret_key: "your-secret-key-change-in-production"
+  algorithm: "HS256"
+  token_expire_hours: 24
+
+# CORS
+cors:
+  allow_origins:
+    - "http://localhost"
+    - "http://localhost:8080"
+    - "http://127.0.0.1"
+  allow_credentials: true
+  allow_methods: ["*"]
+  allow_headers: ["*"]
+
+# Rate Limiting
+rate_limit:
+  requests_per_minute: 60
+  requests_per_hour: 1000
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "api.log"
+
+# Prediction Settings
+prediction:
+  batch_max_size: 100
+  confidence_threshold: 0.5
+  
+# Cache
+cache:
+  enabled: true
+  ttl_seconds: 3600
