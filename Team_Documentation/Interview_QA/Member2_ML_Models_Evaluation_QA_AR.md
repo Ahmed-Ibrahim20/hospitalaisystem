@@ -4,7 +4,7 @@
 
 ---
 
-##  **أسئلة اختيار النموذج**
+## **أسئلة اختيار النموذج**
 
 ### **سؤال 1: لماذا XGBoost بدلاً من Deep Learning للبيانات الطبية؟**
 
@@ -93,7 +93,7 @@ final_params = {
 
 ---
 
-##  **أسئلة التقييم والمقاييس**
+## **أسئلة التقييم والمقاييس**
 
 ### **سؤال 3: لماذا ROC-AUC كمقياس أساسي؟**
 
@@ -147,7 +147,7 @@ cv_results = {
 
 ---
 
-##  **أسئلة Ensemble Methods**
+## **أسئلة Ensemble Methods**
 
 ### **سؤال 5: لماذا استخدمتم Ensemble Methods؟**
 
@@ -214,7 +214,7 @@ voting_comparison = {
 
 ---
 
-##  **أسئلة المعالجة والتحسين**
+## **أسئلة المعالجة والتحسين**
 
 ### **سؤال 7: كيف تعاملتم مع Overfitting؟**
 
@@ -359,7 +359,7 @@ confusion_matrix_results = {
 
 ---
 
-##  **أسئلة النشر والإنتاج**
+## **أسئلة النشر والإنتاج**
 
 ### **سؤال 11: كيف تضمنون أداء النموذج في الإنتاج؟**
 
@@ -435,14 +435,24 @@ def train_and_log_model():
 
 ---
 
-##  **أسئلة الخبير التقني**
+## **أسئلة الخبير التقني**
 
 ### **سؤال 13: ما هي التحديات التقنية في بناء نماذج طبية؟**
 
 **إجابة احترافية:**
-التحديات الرئيسية والحلول:
+الملفات الرئيسية للعمل:
 
-**Technical Challenges:**
+- `d:\hospital-ai-system\AI-Powered\models\advanced_model.py` - النموذج الرئيسي XGBoost مع Ensemble Methods
+- `d:\hospital-ai-system\AI-Powered\models\model_training.py` - تدريب النماذج وضبط الـ Hyperparameters
+- `d:\hospital-ai-system\AI-Powered\models\hyperparameter_tuning.py` - تحسين أداء النماذج باستخدام Bayesian Optimization
+- `d:\hospital-ai-system\AI-Powered\models\saved\advanced_diabetes_model.pkl` - النموذج المدرب المحفوظ
+
+**شرح الملفات:**
+
+- **advanced_model.py**: يحتوي على AdvancedDiabetesPredictor class مع XGBoost, LightGBM, RandomForest و Ensemble
+- **model_training.py**: يقوم بتدريب النماذج باستخدام 5-Fold Cross-Validation ويحفظ أفضل نتيجة
+- **hyperparameter_tuning.py**: يستخدم Grid Search و Bayesian Optimization لتحسين أداء النماذج
+- **advanced_diabetes_model.pkl**: النموذج النهائي المدرب بـ ROC-AUC = 0.8743 جاهز للاستخدام في الإنتاج
 
 ```python
 medical_ml_challenges = {
@@ -504,7 +514,7 @@ class FairnessAnalyzer:
 
 ---
 
-##  **خلاصة الخبير**
+## **خلاصة الخبير**
 
 نموذج XGBoost الخاص بنا يمثل حالة متقدمة في ML الطبي:
 

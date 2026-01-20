@@ -2,9 +2,23 @@
 
 ## Laravel Backend والتكامل والواجهات
 
+**الملفات الرئيسية للعمل:**
+
+- `d:\hospital-ai-system\AI-Powered\laravel\app\Http\Controllers\AIController.php` - التحكم في طلبات الـ AI والتكامل مع FastAPI
+- `d:\hospital-ai-system\AI-Powered\laravel\resources\views\ai\dashboard.blade.php` - واجهة الأطباء لعرض النتائج والتفسيرات
+- `d:\hospital-ai-system\AI-Powered\laravel\app\Services\AIPredictionService.php` - خدمة التكامل مع الـ AI API
+- `d:\hospital-ai-system\AI-Powered\laravel\database\migrations\` - قاعدة البيانات للمرضى والتنبؤات
+
+**شرح الملفات:**
+
+- **AIController.php**: يتعامل مع طلبات الـ AI، يرسل البيانات لـ FastAPI، ويعرض النتائج للواجهة
+- **dashboard.blade.php**: واجهة طبية تفاعلية تعرض التنبؤات، SHAP explanations، وتوصيات الأطباء
+- **AIPredictionService.php**: يدير الاتصال بـ FastAPI API مع fallback و caching
+- **migrations/**: ينشئ جداول المرضى، الزيارات، والتنبؤات في قاعدة البيانات
+
 ---
 
-##  **أسئلة Laravel Architecture**
+## **أسئلة Laravel Architecture**
 
 ### **سؤال 1: لماذا Laravel 12 للنظام الطبي؟**
 
@@ -113,7 +127,7 @@ class Encounter extends Model {
 
 ---
 
-##  **أسئلة التكامل مع FastAPI**
+## **أسئلة التكامل مع FastAPI**
 
 ### **سؤال 3: كيف يتم التكامل بين Laravel و FastAPI؟**
 
@@ -355,7 +369,7 @@ class ResilientAIService
 
 ---
 
-##  **أسئلة الواجهات وتجربة المستخدم**
+## **أسئلة الواجهات وتجربة المستخدم**
 
 ### **سؤال 5: كيف صممتم الواجهات للأطباء؟**
 
@@ -811,7 +825,7 @@ class MedicalWorkflowController extends Controller
 
 ---
 
-##  **أسئلة الخبير التقني**
+## **أسئلة الخبير التقني**
 
 ### **سؤال 8: ما هي التحديات التقنية في تكامل الأنظمة الطبية؟**
 
@@ -910,7 +924,7 @@ class HL7FHIRService
 
 ---
 
-##  **خلاصة الخبير**
+## **خلاصة الخبير**
 
 نظام Laravel الخاص بنا يوفر:
 

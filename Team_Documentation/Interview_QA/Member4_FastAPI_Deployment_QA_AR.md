@@ -1,10 +1,24 @@
 # أسئلة وإجابات العضو 4 - Backend Engineer
 
-## خدمة FastAPI والنشر
+## FastAPI Service and Deployment
+
+**الملفات الرئيسية للعمل:**
+
+- `d:\hospital-ai-system\AI-Powered\deployment\fastapi_service_advanced.py` - الخدمة الرئيسية للـ API مع التنبؤات والتفسيرات
+- `d:\hospital-ai-system\AI-Powered\deployment\docker-compose.yml` - إعداد Docker للتشغيل في الإنتاج
+- `d:\hospital-ai-system\AI-Powered\deployment\nginx.conf` - إعداد Nginx للـ Load Balancing و SSL
+- `d:\hospital-ai-system\AI-Powered\deployment\requirements.txt` - الاعتماديات المطلوبة للخدمة
+
+**شرح الملفات:**
+
+- **fastapi_service_advanced.py**: يوفر REST API endpoints للتنبؤ، التفسير، والمراقبة مع Pydantic validation
+- **docker-compose.yml**: يضبط Docker containers للتطبيق، Redis، و Nginx للإنتاج
+- **nginx.conf**: يضبط Load Balancing و SSL termination للأداء العالي
+- **requirements.txt**: يحدد الاعتماديات مثل FastAPI، XGBoost، SHAP، و Uvicorn
 
 ---
 
-##  **أسئلة Architecture والتصميم**
+## **أسئلة Architecture والتصميم**
 
 ### **سؤال 1: لماذا FastAPI بالذات للنظام الطبي؟**
 
@@ -93,7 +107,7 @@ design_principles = {
 
 ---
 
-##  **أسئلة Validation والأمان**
+## **أسئلة Validation والأمان**
 
 ### **سؤال 3: كيف تضمنون جودة البيانات المدخلة؟**
 
@@ -294,7 +308,7 @@ hipaa_compliance = {
 
 ---
 
-##  **أسئلة الأداء والـ Scalability**
+## **أسئلة الأداء والـ Scalability**
 
 ### **سؤال 5: كيف تضمنون أداء عالي في الإنتاج؟**
 
@@ -468,7 +482,7 @@ server {
 
 ---
 
-##  **أسئلة المراقبة والـ Monitoring**
+## **أسئلة المراقبة والـ Monitoring**
 
 ### **سؤال 7: كيف تراقبون صحة النظام؟**
 
@@ -671,7 +685,7 @@ audit_requirements = {
 
 ---
 
-##  **أسئلة النشر والـ Deployment**
+## **أسئلة النشر والـ Deployment**
 
 ### **سؤال 9: ما هي استراتيجية الـ CI/CD؟**
 
@@ -836,7 +850,7 @@ deployment_process = {
 
 ---
 
-##  **أسئلة الخبير التقني**
+## **أسئلة الخبير التقني**
 
 ### **سؤال 11: ما هي التحديات التقنية في نشر الـ API الطبي؟**
 
@@ -911,7 +925,7 @@ medical_device_standards = {
 
 ---
 
-##  **خلاصة الخبير**
+## **خلاصة الخبير**
 
 خدمة FastAPI الخاصة بنا تمثل حالة متقدمة في Backend الطبي:
 

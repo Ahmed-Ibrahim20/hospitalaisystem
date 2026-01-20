@@ -1,10 +1,24 @@
 # أسئلة وإجابات العضو 3 - AI Researcher
 
-## التفسير (SHAP) ومراقبة النموذج
+## SHAP Explainability and Model Monitoring
+
+**الملفات الرئيسية للعمل:**
+
+- `d:\hospital-ai-system\AI-Powered\explainability\shap_analyzer.py` - تحليل SHAP للتفسير الطبي
+- `d:\hospital-ai-system\AI-Powered\monitoring\model_monitor.py` - مراقبة أداء النموذج في الإنتاج
+- `d:\hospital-ai-system\AI-Powered\monitoring\drift_detection.py` - كشف انحراف البيانات والنموذج
+- `d:\hospital-ai-system\AI-Powered\utils\shap_utils.py` - أدوات مساعدة لـ SHAP
+
+**شرح الملفات:**
+
+- **shap_analyzer.py**: يحلل SHAP values للتفسير المحلي والعام للتنبؤات الطبية
+- **model_monitor.py**: يراقب أداء النموذج في الوقت الفعلي ويرسل تنبيهات عند تدهور الأداء
+- **drift_detection.py**: يكشف انحراف البيانات عن بيانات التدريب ويقترح إعادة التدريب
+- **shap_utils.py**: يوفر أدوات مساعدة لتوليد تفسيرات SHAP بصريًة ونصية
 
 ---
 
-##  **أسئلة SHAP والتفسير**
+## **أسئلة SHAP والتفسير**
 
 ### **سؤال 1: لماذا SHAP بالذات للتفسير الطبي؟**
 
@@ -86,7 +100,7 @@ shap_performance = {
 
 ---
 
-##  **أسئلة التفسير المحلي**
+## **أسئلة التفسير المحلي**
 
 ### **سؤال 3: كيف تفسرون تنبؤ مريض فردي؟**
 
@@ -187,7 +201,7 @@ class ClinicalTranslator:
 
 ---
 
-##  **أسئلة التفسير العام**
+## **أسئلة التفسير العام**
 
 ### **سؤال 5: كيف تحللون أهمية الميزات على مستوى السكان؟**
 
@@ -297,7 +311,7 @@ medical_interactions = [
 
 ---
 
-##  **أسئلة المراقبة والـ Drift Detection**
+## **أسئلة المراقبة والـ Drift Detection**
 
 ### **سؤال 7: كيف تراقبون أداء النموذج في الإنتاج؟**
 
@@ -416,7 +430,7 @@ class DataDriftDetector:
 
 ---
 
-##  **أسئلة النظام والتحسينات**
+## **أسئلة النظام والتحسينات**
 
 ### **سؤال 9: كيف تضمنون جودة التفسير؟**
 
@@ -513,7 +527,7 @@ def generate_counterfactual(patient_data, model, target_outcome=0):
 
 ---
 
-##  **أسئلة الخبير التقني**
+## **أسئلة الخبير التقني**
 
 ### **سؤال 11: ما هي التحديات التقنية في SHAP للبيانات الطبية؟**
 
@@ -573,7 +587,7 @@ medical_explainability_standards = {
 
 ---
 
-##  **خلاصة الخبير**
+## **خلاصة الخبير**
 
 نظام SHAP والمراقبة الخاص بنا يوفر:
 
