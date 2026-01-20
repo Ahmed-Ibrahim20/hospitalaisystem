@@ -4,17 +4,13 @@
 
 **الملفات الرئيسية للعمل:**
 
-- `d:\hospital-ai-system\AI-Powered\explainability\shap_analyzer.py` - تحليل SHAP للتفسير الطبي
-- `d:\hospital-ai-system\AI-Powered\monitoring\model_monitor.py` - مراقبة أداء النموذج في الإنتاج
-- `d:\hospital-ai-system\AI-Powered\monitoring\drift_detection.py` - كشف انحراف البيانات والنموذج
-- `d:\hospital-ai-system\AI-Powered\utils\shap_utils.py` - أدوات مساعدة لـ SHAP
+- `d:\hospital-ai-system\AI-Powered\models\advanced_model.py` - يحتوي على SHAP integration للتفسير الطبي
+- `d:\hospital-ai-system\AI-Powered\deployment\monitoring.py` - مراقبة أداء النموذج في الإنتاج
 
 **شرح الملفات:**
 
-- **shap_analyzer.py**: يحلل SHAP values للتفسير المحلي والعام للتنبؤات الطبية
-- **model_monitor.py**: يراقب أداء النموذج في الوقت الفعلي ويرسل تنبيهات عند تدهور الأداء
-- **drift_detection.py**: يكشف انحراف البيانات عن بيانات التدريب ويقترح إعادة التدريب
-- **shap_utils.py**: يوفر أدوات مساعدة لتوليد تفسيرات SHAP بصريًة ونصية
+- **advanced_model.py**: يحتوي على SHAP integration للتفسير المحلي والعام للتنبؤات الطبية
+- **monitoring.py**: يراقب أداء النموذج في الوقت الفعلي ويرسل تنبيهات عند تدهور الأداء
 
 ---
 

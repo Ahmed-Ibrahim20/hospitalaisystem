@@ -4,17 +4,15 @@
 
 **الملفات الرئيسية للعمل:**
 
-- `d:\hospital-ai-system\AI-Powered\laravel\app\Http\Controllers\AIController.php` - التحكم في طلبات الـ AI والتكامل مع FastAPI
-- `d:\hospital-ai-system\AI-Powered\laravel\resources\views\ai\dashboard.blade.php` - واجهة الأطباء لعرض النتائج والتفسيرات
-- `d:\hospital-ai-system\AI-Powered\laravel\app\Services\AIPredictionService.php` - خدمة التكامل مع الـ AI API
-- `d:\hospital-ai-system\AI-Powered\laravel\database\migrations\` - قاعدة البيانات للمرضى والتنبؤات
+- `d:\hospital-ai-system\AI-Powered\deployment\fastapi_service_advanced.py` - الـ API Backend للتنبؤات الطبية
+- `d:\hospital-ai-system\AI-Powered\models\advanced_model.py` - النماذج الـ ML المستخدمة
+- `d:\hospital-ai-system\AI-Powered\models\advanced_features.py` - هندسة الميزات الطبية
 
 **شرح الملفات:**
 
-- **AIController.php**: يتعامل مع طلبات الـ AI، يرسل البيانات لـ FastAPI، ويعرض النتائج للواجهة
-- **dashboard.blade.php**: واجهة طبية تفاعلية تعرض التنبؤات، SHAP explanations، وتوصيات الأطباء
-- **AIPredictionService.php**: يدير الاتصال بـ FastAPI API مع fallback و caching
-- **migrations/**: ينشئ جداول المرضى، الزيارات، والتنبؤات في قاعدة البيانات
+- **fastapi_service_advanced.py**: يوفر REST API endpoints للتنبؤ، التفسير، والمراقبة مع Pydantic validation
+- **advanced_model.py**: يحتوي على النماذج المدربة XGBoost, LightGBM, RandomForest
+- **advanced_features.py**: ينشئ الميزات الطبية المستخدمة في التنبؤات
 
 ---
 

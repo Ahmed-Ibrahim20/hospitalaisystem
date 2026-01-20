@@ -110,6 +110,7 @@ class MedicalFeatureEngineer(BaseEstimator, TransformerMixin):
         # ==================== 4. التفاعلات بين الميزات ====================
         
         # تفاعل العمر مع BMI
+        #موشر كتلة الجسم 
         X_copy['age_bmi_interaction'] = X_copy['Age'] * X_copy['BMI']
         
         # تفاعل العمر مع ضغط الدم
@@ -124,6 +125,7 @@ class MedicalFeatureEngineer(BaseEstimator, TransformerMixin):
         # ==================== 5. فئات BMI ====================
         
         # تصنيف BMI حسب WHO
+        #موشر الصحة العالميه
         X_copy['bmi_category'] = pd.cut(
             X_copy['BMI'],
             bins=[0, 18.5, 25, 30, 35, 100],

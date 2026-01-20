@@ -5,16 +5,14 @@
 **الملفات الرئيسية للعمل:**
 
 - `d:\hospital-ai-system\AI-Powered\deployment\fastapi_service_advanced.py` - الخدمة الرئيسية للـ API مع التنبؤات والتفسيرات
-- `d:\hospital-ai-system\AI-Powered\deployment\docker-compose.yml` - إعداد Docker للتشغيل في الإنتاج
-- `d:\hospital-ai-system\AI-Powered\deployment\nginx.conf` - إعداد Nginx للـ Load Balancing و SSL
-- `d:\hospital-ai-system\AI-Powered\deployment\requirements.txt` - الاعتماديات المطلوبة للخدمة
+- `d:\hospital-ai-system\AI-Powered\deployment\monitoring.py` - مراقبة الأداء والصحة للخدمة
+- `d:\hospital-ai-system\AI-Powered\deployment\requirements_api.txt` - الاعتماديات المطلوبة للخدمة
 
 **شرح الملفات:**
 
 - **fastapi_service_advanced.py**: يوفر REST API endpoints للتنبؤ، التفسير، والمراقبة مع Pydantic validation
-- **docker-compose.yml**: يضبط Docker containers للتطبيق، Redis، و Nginx للإنتاج
-- **nginx.conf**: يضبط Load Balancing و SSL termination للأداء العالي
-- **requirements.txt**: يحدد الاعتماديات مثل FastAPI، XGBoost، SHAP، و Uvicorn
+- **monitoring.py**: يراقب أداء النموذج في الوقت الفعلي ويرسل تنبيهات عند تدهور الأداء
+- **requirements_api.txt**: يحدد الاعتماديات مثل FastAPI، XGBoost، SHAP، و Uvicorn
 
 ---
 

@@ -443,16 +443,14 @@ def train_and_log_model():
 الملفات الرئيسية للعمل:
 
 - `d:\hospital-ai-system\AI-Powered\models\advanced_model.py` - النموذج الرئيسي XGBoost مع Ensemble Methods
-- `d:\hospital-ai-system\AI-Powered\models\model_training.py` - تدريب النماذج وضبط الـ Hyperparameters
-- `d:\hospital-ai-system\AI-Powered\models\hyperparameter_tuning.py` - تحسين أداء النماذج باستخدام Bayesian Optimization
-- `d:\hospital-ai-system\AI-Powered\models\saved\advanced_diabetes_model.pkl` - النموذج المدرب المحفوظ
+- `d:\hospital-ai-system\AI-Powered\models\ensemble_model.py` - Ensemble Methods لتحسين الأداء
+- `d:\hospital-ai-system\AI-Powered\models\baseline_diabetes.py` - النماذج الأساسية للمقارنة
 
 **شرح الملفات:**
 
 - **advanced_model.py**: يحتوي على AdvancedDiabetesPredictor class مع XGBoost, LightGBM, RandomForest و Ensemble
-- **model_training.py**: يقوم بتدريب النماذج باستخدام 5-Fold Cross-Validation ويحفظ أفضل نتيجة
-- **hyperparameter_tuning.py**: يستخدم Grid Search و Bayesian Optimization لتحسين أداء النماذج
-- **advanced_diabetes_model.pkl**: النموذج النهائي المدرب بـ ROC-AUC = 0.8743 جاهز للاستخدام في الإنتاج
+- **ensemble_model.py**: يقوم بدمج عدة نماذج باستخدام Voting و Stacking لتحسين الأداء
+- **baseline_diabetes.py**: نماذج أساسية للمقارنة مثل Logistic Regression و Decision Trees
 
 ```python
 medical_ml_challenges = {
