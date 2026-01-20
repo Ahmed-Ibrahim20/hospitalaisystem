@@ -190,19 +190,15 @@
                             href="{{ route('dashboard') }}">Home</a>
                     </li>
 
-                    @can('viewAny', \App\Models\User::class)
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('users.*') ? 'active' : '' }}"
                             href="{{ route('users.index') }}">
-                            <svg class="me-1" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 7H17c-.8 0-1.5.7-1.5 1.5v6c0 .8.7 1.5 1.5 1.5h1v6h2zM12.5 11.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5S11 9.17 11 10s.67 1.5 1.5 1.5zM5.5 6c1.11 0 2-.89 2-2s-.89-2-2-2-2 .89-2 2 .89 2 2 2zm2 16v-7H9V9c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v6H1.5v7h6zM12 13.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z" />
-                            </svg>
+                        
                             المستخدمين
                         </a>
                     </li>
-                    @endcan
+                
 
-                    @can('viewAny', \App\Models\User::class)
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('roles.*') ? 'active' : '' }}"
                             href="{{ route('roles.index') }}">
@@ -212,7 +208,7 @@
                             الأدوار
                         </a>
                     </li>
-                    @endcan
+        
 
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('patients.*') ? 'active' : '' }}"

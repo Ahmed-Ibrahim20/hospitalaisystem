@@ -270,10 +270,25 @@
                         };
                         @endphp
                         <span class="role-badge {{ $roleClass }}">
+                            @if($user->role->name == 'doctor')
                             <svg class="me-1" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C14.8,12.4 14.4,13.2 13.7,13.7V16.5C13.7,17.1 13.3,17.5 12.7,17.5H11.3C10.7,17.5 10.3,17.1 10.3,16.5V13.7C9.6,13.2 9.2,12.4 9.2,11.5V10C9.2,8.6 10.6,7 12,7Z" />
                             </svg>
+                            دكتور
+                            @elseif($user->role->name == 'admin')
+                            <svg class="me-1" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C14.8,12.4 14.4,13.2 13.7,13.7V16.5C13.7,17.1 13.3,17.5 12.7,17.5H11.3C10.7,17.5 10.3,17.1 10.3,16.5V13.7C9.6,13.2 9.2,12.4 9.2,11.5V10C9.2,8.6 10.6,7 12,7Z" />
+                            </svg>
+                            مدير
+                            @elseif($user->role->name == 'nurse')
+                            ممرض
+                            @elseif($user->role->name == 'receptionist')
+                            موظف استقبال
+                            @elseif($user->role->name == 'pharmacist')
+                            صيدلي
+                            @else
                             {{ $user->role->name }}
+                            @endif
                         </span>
                         @else
                         <span class="role-badge role-default">غير محدد</span>
